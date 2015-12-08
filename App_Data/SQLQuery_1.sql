@@ -1,0 +1,1 @@
+select role from tblLogin where Username='Admin' and password='Admin'

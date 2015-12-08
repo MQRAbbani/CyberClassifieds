@@ -1,0 +1,109 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MainMasterPage.master.cs"
+    Inherits="MainMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register Src="~/UserControls/HeaderControl.ascx" TagName="UserControl" TagPrefix="Uc1" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style4
+        {
+            width: 995px;
+        }
+        .style5
+        {
+            font-size: small;
+            font-weight: bold;
+        }
+        .style6
+        {
+            font-size: small;
+            font-weight: bold;
+            color: #FF0000;
+        }
+        .style7
+        {
+            font-size: small;
+            font-weight: bold;
+            color: #FFFFFF;
+        }
+        .style8
+        {
+            font-size: small;
+        }
+        .style9
+        {
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+        .style10
+        {
+            color: #FFFFFF;
+        }
+        .style12
+        {
+            color: #FF0066;
+        }
+        .style13
+        {
+            color: #FF3300;
+        }
+    </style>
+</head>
+<body topmargin="0" leftmargin="0" rightmargin="0">
+    <form id="form1" runat="server">
+    <center>
+        <table border="0" cellpadding="0" cellspacing="0">
+        <tr style="height:2px;background-color:#FFFFFF">
+            <td ></td>
+            </tr>
+            <tr>
+                <td valign="middle" class="style4">
+                    <Uc1:UserControl ID="header" runat="server" />
+                </td>
+            </tr>
+            <tr style="height:2px;background-color:White">
+            <td ></td>
+            </tr>
+            <tr style="background-color:#FF3300">
+                <td>
+                    <span class="style13">|||</span>&nbsp; <a href="Admin/Default.aspx" class="style8"><span class="style9">Administration</span></a>&nbsp;
+                    <b class="style6">|| </b> <span class="style10">&nbsp;</span><a href="Emp/Default.aspx" class="style5"><span 
+                        class="style10">Employee</span></a>&nbsp;
+                    <span class="style6">||</span> <span class="style10">&nbsp;</span><a href="frmAboutUs.aspx" class="style5"><span 
+                        class="style10">About Us</span></a>
+                    <b class="style6">&nbsp;||</b>&nbsp; <a href="frmContactUs.aspx" class="style5">
+                    <span class="style10">Contact Us</span></a>&nbsp; <span class="style12">|||
+                    </span>
+                </td>
+            </tr>
+            <tr style="height:2px;background-color:Red">
+            <td ></td>
+            </tr>
+            <tr>
+            <td valign="top" height="395px">
+            
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+            </td>
+            </tr>
+            <tr style="height:2px;background-color:Red">
+            <td ></td>
+            </tr>
+            <tr>
+            <td class="style7" style="background-color:Gray">
+            Copyrights Reserved Cyber Classifieds
+            </td>
+            </tr>
+            <tr style="height:2px;background-color:Red">
+            <td ></td>
+            </tr>
+        </table>
+        
+    </center>
+    </form>
+</body>
+</html>

@@ -1,0 +1,112 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AgentsMasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<%@ Register Src="~/UserControls/HeaderControl.ascx" TagName="UserControl" TagPrefix="Uc1" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Untitled Page</title>
+    
+    <style type="text/css">
+        .style3
+        {
+            width: 100%;
+        }
+        #datePicker
+    {
+	display :none;
+    position:absolute ;
+    border:solid 2px black;
+    background-color:White;
+    }
+    </style>
+     <script type="text/javascript" language="javascript">
+    function displaydatepick()
+    {
+    var datePicker=document.getElementById("datePicker");
+    datePicker.style.display='block';
+    return ;
+    }
+    </script>
+</head>
+<body topmargin="0" leftmargin="0" rightmargin="0">
+    <form id="form1" runat="server">
+    <div><center>
+    <table border="0" cellspacing="0" cellpadding="0" width="100%">
+    <tr style="background-color:Red">
+            <td style="height:2px"></td>
+            </tr>
+    <tr>
+    <td class="style3">
+    <Uc1:UserControl ID="UserControl1" runat="server" />
+    </td>
+    </tr>
+    <tr style="background-color:Red">
+            <td style="height:2px"></td>
+            </tr>
+    <tr style="background-color:Gray"><td class="style3">
+        <asp:Menu ID="Menu1" runat="server" Width="50%" BackColor="Gray" DynamicHorizontalOffset="2"
+                        Font-Names="Verdana" Font-Size="0.8em" Font-Bold="true" ForeColor="White" Orientation="Horizontal"
+                        StaticSubMenuIndent="10px">
+                        <StaticSelectedStyle BackColor="Gray" />
+                        <StaticMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <DynamicHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <DynamicMenuStyle BackColor="Gray" />
+                        <DynamicSelectedStyle BackColor="#507CD1" />
+                        <DynamicMenuItemStyle HorizontalPadding="5px" VerticalPadding="2px" />
+                        <StaticHoverStyle BackColor="#284E98" ForeColor="White" />
+                        <Items>
+<asp:MenuItem Text="|||" Value="|||"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/Emp/Default.aspx" Text="Home" Value="Home">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                            <asp:MenuItem Text="My Account" Value="Customer" ToolTip="Your Own Details">
+                                <asp:MenuItem NavigateUrl="~/Emp/frmEmpDetails.aspx" Text="My Profile" 
+                                    Value="My Profile"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Emp/frmChangePassword.aspx" 
+                                    Text="Change Password" Value="Change Password"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                            <asp:MenuItem Text="Advertisements Section" Value="Adds Details" 
+                                ToolTip="About Employee">
+                                <asp:MenuItem NavigateUrl="~/Emp/frmCustomerDetails.aspx" Text="Add Booking" 
+                                    Value="Add Employee"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Emp/frmAdvtDetails.aspx" 
+                                    Text="Advertisement Details" Value="View All Employees"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/Emp/frmAddBookingByEmp.aspx" 
+                                    Text="Add Booking By Emp" Value="Add Booking By Emp"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="||" Value="||"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/frmLogOut.aspx" Text="SignOut" Value="SignOut">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="|||" Value="|||"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+        </td></tr>
+        <tr style="background-color:Red">
+            <td style="height:2px"></td>
+            </tr>
+        
+        <tr><td style="height:413px">
+        
+       
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder></td></tr>
+        <tr style="background-color:Red">
+            <td style="height:2px"></td>
+            </tr>
+            <tr>
+            <td style="font-size: small; text-align: center;background-color:Gray">
+                <span class="style4">Copyrights Reserved News Paper Proclamation Monitoring System </span>
+            </td>
+            </tr>
+            <tr style="background-color:Red">
+            <td style="height:2px"></td>
+            </tr>
+            
+    </table>
+        
+  </center>  </div>
+    </form>
+</body>
+</html>
